@@ -1,0 +1,23 @@
+ <div class="container">
+  <div id="stream">
+    <script type="text/javascript">
+      var options = {
+        width: 1280,
+        height: 720,
+        channel: "summit1g",
+      };
+      var player = new Twitch.Player("stream", options);
+      player.setVolume(0.5);
+    </script>
+  </div>
+
+  <div class="card-container">
+    <form class="card-search" action="/card" method="GET">
+    <label for="card">Which card do you want to view?</label>
+      <input type='text' name='card'>
+      <button type='submit'>Get Details</button>
+    </form>
+    <div class="card-display">
+    </div>
+  </div>
+</div>

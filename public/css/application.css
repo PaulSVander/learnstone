@@ -1,0 +1,32 @@
+.flavor {
+  font-size: large;
+}
+
+.container {
+  display: flex;
+}
+
+#stream {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: dotted 1px green;
+}
+
+.card-search {
+  align-self: flex-start;
+  border: dotted 1px blue;
+}
+
+.card-display {
+  border: dotted 1px red;
+}
+
+#card-image {
+  align-self: center;
+}
