@@ -1,10 +1,18 @@
- <div class="container">
+<nav class="nav-bar-top">
+  <form class="chanel-form" action="/" method="POST">
+    <label for="channel">Pick a streamer: </label>
+    <input type="text" name="channel">
+    <button type="submit">Change the channel</button>
+  </form>
+</nav>
+
+<div class="container">
   <div id="stream">
     <script type="text/javascript">
       var options = {
-        width: 1280,
-        height: 720,
-        channel: "summit1g",
+        width: <%= options[:width] %>,
+        height: <%= options[:height] %>,
+        channel: "<%= options[:channel] %>"
       };
       var player = new Twitch.Player("stream", options);
       player.setVolume(0.5);
@@ -17,7 +25,8 @@
       <input type='text' name='card'>
       <button type='submit'>Get Details</button>
     </form>
-    <div class="card-display">
+    <div class="card-display" style="display:none">
+      <%= erb :show_card %>
     </div>
   </div>
 </div>

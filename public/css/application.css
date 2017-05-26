@@ -4,15 +4,18 @@
 
 .container {
   display: flex;
+  justify-content: space-between;
 }
 
 #stream {
   display: flex;
   justify-content: flex-start;
+  padding-right: 0;
 }
 
 .card-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
   border: dotted 1px green;
@@ -24,9 +27,16 @@
 }
 
 .card-display {
+  display: flex;
+  flex-direction: column;
   border: dotted 1px red;
 }
 
-#card-image {
+#card-img {
   align-self: center;
+  border: dotted 1px green;
+}
+
+.nav-bar-top {
+  border: dotted 2px blue;
 }
