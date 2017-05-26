@@ -1,5 +1,15 @@
+body {
+  background-color: #F5D281;
+}
+
 .flavor {
-  font-size: large;
+  font-size: x-large;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+
+.info-list {
+  font-weight: bold;
 }
 
 .container {
@@ -22,7 +32,7 @@
 }
 
 .card-search {
-  align-self: flex-start;
+  align-self: center;
   border: dotted 1px blue;
 }
 
@@ -38,5 +48,8 @@
 }
 
 .nav-bar-top {
+  display: flex;
+  justify-content: space-around;
   border: dotted 2px blue;
 }
+

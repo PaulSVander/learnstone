@@ -13,13 +13,13 @@ $(document).ready(function() {
     })
     .done(function(response) {
       $(".card-display").html(response)
-      $(".card-search")[0].reset()
-    })
 
+    })
+    $(".card-search")[0].reset()
     $("#card-img").attr({
-      src: "http://www.hearthstonetopdecks.com/wp-content/uploads/2014/06/card-back-default.png",
-      width: 290,
-      height: 412
+      src: "http://wow.zamimg.com/images/hearthstone/backs/animated/Card_Back_Esports.gif",
+      width: 310,
+      height: 432
     })
 
     $("#card-details-list").html(" ")

@@ -2,17 +2,18 @@ require 'rest-client'
 require 'json'
 
 get '/' do
-  options = {width: 1280, height: 720, channel: "ESL_Hearthstone"}
+  options = {width: 1080, height: 720, channel: "ESL_Hearthstone"}
   erb :'index', locals: {options: options}
 end
 
 post '/' do
-  options = {width: 1280, height: 720, channel: "#{params[:channel]}"}
+  options = {width: 1080, height:720, channel: "#{params[:channel]}"}
   erb :'index', locals: {options: options}
 end
 
 get '/card' do
   params[:card].gsub!(" ", "%20")
+  p ENV["HEARTHSTONE_TOKEN"]
   response = RestClient.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/#{params[:card]}", headers = {"X-Mashape-Key": ENV["HEARTHSTONE_TOKEN"]})
   response = JSON.parse(response)
 

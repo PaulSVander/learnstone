@@ -4,6 +4,12 @@
     <input type="text" name="channel">
     <button type="submit">Change the channel</button>
   </form>
+
+  <form class="card-search" action="/card" method="GET">
+    <label for="card">Which card do you want to view?</label>
+      <input type='text' name='card'>
+      <button type='submit'>Get Details</button>
+    </form>
 </nav>
 
 <div class="container">
@@ -20,11 +26,6 @@
   </div>
 
   <div class="card-container">
-    <form class="card-search" action="/card" method="GET">
-    <label for="card">Which card do you want to view?</label>
-      <input type='text' name='card'>
-      <button type='submit'>Get Details</button>
-    </form>
     <div class="card-display" style="display:none">
       <%= erb :show_card %>
     </div>
