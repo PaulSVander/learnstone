@@ -13,7 +13,6 @@ end
 
 get '/card' do
   params[:card].gsub!(" ", "%20")
-  p ENV["HEARTHSTONE_TOKEN"]
   response = RestClient.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/#{params[:card]}", headers = {"X-Mashape-Key": ENV["HEARTHSTONE_TOKEN"]})
   response = JSON.parse(response)
 
